@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "moonDance";
+  src: url("../fonts/MoonDance-Regular.ttf") format("truetype");
+}
+
+$bordeau: #581413;
+$beige: #b2a086;
+
+body {
+  color: $bordeau;
+  font-family: "moonDance", sans-serif;
+  font-size: 2em;
+  .header {
+    height: 200px;
+    .backgroundHeader {
+      position: absolute;
+      top: 0px;
+      opacity: 0.2;
+      width: 100%;
+      height: 200px;
+    }
+    .logo {
+      display: block;
+      width: 241px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .login{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $beige;
+    height: 50px;
+  }
+  .contenu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+  }
+}
+
+form {
+  label{
+    margin-right: 50px;
+  }
+  input{
+    float: right;
+    text-align: center;
+  }
+  button{
+    display: block;
+    margin: 50px auto;
+    color: $bordeau;
+    background-color: $beige;
+  }
+  .form-css{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+}

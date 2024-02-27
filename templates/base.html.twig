@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/normalize.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.min.css') }}">
+    <title>Samtosha</title>
+</head>
+<body>
+    <div class="header">
+        <img src="{{ asset('images/logo/logo.png')}}" class="logo" alt='logo'/>
+        <img src="{{ asset('images/backgrounds/backgroundHeader.png')}}" class="backgroundHeader" alt='backgroundHeader'/>
+    </div>
+
+    {% if is_granted('ROLE_USER') %}
+    <a href="/logout" class="login">Se déconnecter</a>
+    {% elseif not is_granted('ROLE_USER') %}
+    <a href="/login" class="login">Se connecter</a>
+    {% endif %}
+    
+    <div class="nav">
+        <a href="/actualites">Actualités</a>
+        <a href="/evenements">Evènements</a>
+        <a href="/contactez-moi">Contactez-moi</a>
+        {% if is_granted('ROLE_ADMIN') %}
+        <a href="/admin">AdminBoard</a>
+        {% endif %}
+
+    </div>
+
+    <div class="contenu">
+        {% block body %}
+        {% endblock %}
+    </div>
+
+    
+</body>
+</html>

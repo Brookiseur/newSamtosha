@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/normalize.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin.min.css') }}">
+    <title>Admin Board</title>
+</head>
+<body>
+    
+<div id ="nav-latteral" class="nav-latteral">
+    <div id="nav-close" class="nav-button">
+    <img src="{{asset('images/adminnav/close.png')}}" class="close picto" alt="fermer">
+    </div>
+    <div class="nav-links">
+        <div class="nav-link">
+            <a href="">Création d'évènements</a>
+        </div>
+        <div class="nav-link">
+            <a href="/">Retour au site</a>
+        </div>
+    </div>
+</div>
+<div id="nav-wrapper"></div>
+    <nav>
+        <div id="nav-open" class="nav-button">
+            <img src="{{asset('images/adminnav/menu.png')}}" class="menu picto" alt="menu">
+        </div>
+    </nav>
+
+<script src="{{ asset('js/admin/app.js') }}"></script>
+</body>
+</html>
